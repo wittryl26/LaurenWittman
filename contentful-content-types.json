@@ -1,0 +1,142 @@
+{
+  "homepage": {
+    "name": "Homepage",
+    "description": "Homepage content management",
+    "fields": [
+      {
+        "id": "heroTitle",
+        "name": "Hero Title",
+        "type": "Symbol",
+        "required": true
+      },
+      {
+        "id": "heroSubtitle",
+        "name": "Hero Subtitle",
+        "type": "Symbol"
+      },
+      {
+        "id": "aboutContent",
+        "name": "About Content",
+        "type": "RichText"
+      },
+      {
+        "id": "contactPhone",
+        "name": "Contact Phone",
+        "type": "Symbol"
+      },
+      {
+        "id": "contactEmail",
+        "name": "Contact Email",
+        "type": "Symbol"
+      }
+    ]
+  },
+  "listing": {
+    "name": "Property Listing",
+    "description": "Real estate property listings",
+    "fields": [
+      {
+        "id": "address",
+        "name": "Address",
+        "type": "Symbol",
+        "required": true
+      },
+      {
+        "id": "price",
+        "name": "Price",
+        "type": "Integer",
+        "required": true
+      },
+      {
+        "id": "propertyType",
+        "name": "Property Type",
+        "type": "Symbol"
+      },
+      {
+        "id": "images",
+        "name": "Images",
+        "type": "Array",
+        "items": {
+          "type": "Link",
+          "linkType": "Asset"
+        }
+      },
+      {
+        "id": "mlsNumber",
+        "name": "MLS Number",
+        "type": "Symbol"
+      },
+      {
+        "id": "bedrooms",
+        "name": "Bedrooms",
+        "type": "Integer"
+      },
+      {
+        "id": "bathrooms",
+        "name": "Bathrooms",
+        "type": "Number"
+      },
+      {
+        "id": "squareFootage",
+        "name": "Square Footage",
+        "type": "Integer"
+      },
+      {
+        "id": "description",
+        "name": "Description",
+        "type": "RichText"
+      },
+      {
+        "id": "virtualTourLink",
+        "name": "Virtual Tour Link",
+        "type": "Symbol"
+      },
+      {
+        "id": "status",
+        "name": "Status",
+        "type": "Symbol",
+        "validations": [
+          {
+            "in": ["active", "sold", "pending"]
+          }
+        ]
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "Client Testimonial",
+    "description": "Client testimonials and reviews",
+    "fields": [
+      {
+        "id": "clientName",
+        "name": "Client Name",
+        "type": "Symbol",
+        "required": true
+      },
+      {
+        "id": "clientRole",
+        "name": "Client Role",
+        "type": "Symbol"
+      },
+      {
+        "id": "testimonialText",
+        "name": "Testimonial Text",
+        "type": "Text",
+        "required": true
+      },
+      {
+        "id": "rating",
+        "name": "Rating",
+        "type": "Integer",
+        "validations": [
+          {
+            "range": {
+              "min": 1,
+              "max": 5
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
